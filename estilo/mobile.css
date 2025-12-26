@@ -167,6 +167,19 @@ a#saibamais:hover {
     text-decoration: underline;
 }
 
+section#secundario div#video {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    aspect-ratio: 16/9;
+}
+
+#video iframe {
+    width: 100%;
+    height: 100%;
+    
+}
+
 section#terceiro {
     grid-row: -2 / -1;
     grid-column: 1 / 2;
