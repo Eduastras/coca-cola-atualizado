@@ -60,24 +60,36 @@
             <h2>Legal</h2>
         </div>
         <div id="rodape">
-            <p>Entre em contato em caso de duvidas!</p>
-            <p>Desenvolvido por <a href="https://www.instagram.com/eduastras/" target="_blank">Eduastra</a></p>
+            <p>Entre em <a href="#"><strong>contato</strong></a> em caso de duvidas!</p>
+            <p>Desenvolvido por <a href="https://www.instagram.com/eduastras/" target="_blank" id="copy"><strong>Eduastra</strong></a></p>
         </div>
     </footer>
     
     <script>
         let menu = window.document.querySelector("i#icone")
+        let lista = window.document.querySelector("ul#lista")
         menu.addEventListener("click", clickar)
+        window.addEventListener("resize", verificarTela)
 
         function clickar(){
-            let lista = window.document.querySelector("#lista")
-
-            if (lista.style.display !== "block"){
-                lista.style.display = "block"
+            if (window.innerWidth < 975) {                
+                if (lista.style.display !== "block"){
+                    lista.style.display = "block"
+                } else {
+                    lista.style.display = "none"
+                }
+        }
+    }
+        function verificarTela() {
+            if (window.innerWidth >= 975) {
+                lista.style.display = "flex"
+                lista.style.flexDirection = "row"
             } else {
                 lista.style.display = "none"
             }
         }
+        
+        verificarTela()
     </script>
 </body>
 </html>
